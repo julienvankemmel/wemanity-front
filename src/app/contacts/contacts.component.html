@@ -1,3 +1,18 @@
-<div class="container">
-    
+<div class="container mt-3">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Phone number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contactList">
+                <td>{{ contact.firstname }}</td>
+                <td>{{ contact.lastname }}</td>
+                <td>{{ contact.phone }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
