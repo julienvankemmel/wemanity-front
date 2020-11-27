@@ -18,5 +18,8 @@ export class PhonebookService {
     )
   }
 
+  async addContact(data:any){
+    return await this.http.post(environment.apiUrl+'/phonebooks', data, {responseType: 'json'}).toPromise();
+  }
 
 }

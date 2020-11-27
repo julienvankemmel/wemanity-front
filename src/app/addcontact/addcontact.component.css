@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+form{
+    margin:auto;
+}
+mat-form-field{
+    width:50vw!important;
+}
