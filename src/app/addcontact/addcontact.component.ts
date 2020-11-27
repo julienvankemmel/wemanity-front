@@ -28,8 +28,12 @@ export class AddcontactComponent implements OnInit {
       "lastname": this.addContactForm.value.lastname,
       "phone": this.addContactForm.value.phone
     }
-    await this.phonebookService.addContact(this.form);
-      this.router.navigateByUrl('');
+    await this.phonebookService.addContact(this.form).then(
+      data => {
+        this.router.navigateByUrl('')
+      },
+      error => alert(error)
+    );
   }
 
 }

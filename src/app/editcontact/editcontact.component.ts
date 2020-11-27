@@ -4,6 +4,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute,Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-editcontact',
   templateUrl: './editcontact.component.html',
@@ -42,8 +43,13 @@ export class EditcontactComponent implements OnInit {
       "lastname": this.editContactForm.value.lastname,
       "phone": this.editContactForm.value.phone
     }
-    await this.phonebookService.modifyContact(this.form, this.id);
-      this.router.navigateByUrl('');
+    await this.phonebookService.modifyContact(this.form, this.id).then(
+      data => {
+        this.router.navigateByUrl('')
+      },
+      error => alert(error)
+    );
+    
   }
 
 }
