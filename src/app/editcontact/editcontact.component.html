@@ -1,1 +1,21 @@
-<p>editcontact works!</p>
+<div class="container">
+    <form [formGroup]="editContactForm" (ngSubmit)="onSubmit()">
+        <h1>Edit contact</h1>
+        <mat-form-field appearance="fill">
+            <mat-label>Firstname</mat-label>
+            <input matInput  formControlName="firstname">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Lastname</mat-label>
+            <input matInput formControlName="lastname">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Phone number</mat-label>
+            <input matInput formControlName="phone">
+        </mat-form-field>
+        <br>
+        <button mat-flat-button color="accent">Submit</button>
+    </form>
+  </div>
